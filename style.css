@@ -1,0 +1,66 @@
+/* Colors from palette */
+:root {
+    --primary: #1b4d63;   /* Dark Blue */
+    --secondary: #60d18f; /* Green */
+    --accent: #7d7d7d;    /* Grey */
+    --border: #000000;    /* Black */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: var(--primary);
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.logo {
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary);
+    color: white;
+}
+
+.description {
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid var(--border);
+    width: 60%;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: var(--secondary);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+button:hover {
+    background-color: var(--accent);
+}
