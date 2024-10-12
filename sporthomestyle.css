@@ -1,0 +1,62 @@
+/* Colors from palette */
+:root {
+    --primary: #1b4d63;   /* Dark Blue */
+    --secondary: #60d18f; /* Green */
+    --accent: #7d7d7d;    /* Grey */
+    --border: #000000;    /* Black */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+aside {
+    background-color: var(--primary);
+    padding: 20px;
+    width: 200px;
+    height: 100vh;
+    color: white;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+    width: 80%;
+}
+
+.category {
+    background-color: var(--secondary);
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2em;
+}
