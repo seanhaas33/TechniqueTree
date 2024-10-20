@@ -1,76 +1,65 @@
+/* Apply the background color to the entire website */
+body {
+  background-color: rgb(21, 67, 96); /* Primary Blue */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
 /* Container for the homepage */
 .homepage-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Header section */
-  .header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 800px;
-    align-items: center;
-  }
-  
-  .title {
-    font-size: 36px;
-    font-weight: bold;
-  }
-  
-  .logo {
-    width: 100px;
-    height: 50px;
-    border: 2px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  /* Description section */
-  .description-section {
-    width: 100%;
-    max-width: 600px;
-    margin: 20px 0;
-  }
-  
-  .description {
-    text-align: center;
-    font-size: 18px;
-    padding: 20px;
-    border: 2px solid black;
-    border-radius: 5px;
-  }
-  
-  /* Buttons section */
-  .buttons-section {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 800px;
-    margin-top: 20px;
-  }
-  
-  .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 150px;
-    border: 2px solid black;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .button:hover {
-    background-color: #f0f0f0;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh; /* Ensure it covers the full viewport height */
+  color: white; /* Make text readable on the blue background */
+}
+
+
+/* Description section */
+.description-section {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
+}
+
+.description {
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+  border: 2px solid rgb(127, 127, 127); /* Accent Grey */
+  border-radius: 5px;
+  color: rgb(0, 0, 0); /* Black text for readability */
+  background-color: rgb(96, 206, 128); /* Secondary Green background */
+}
+
+/* Buttons section */
+.buttons-section {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 20px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border: 2px solid white; /* White border to match theme */
+  border-radius: 50%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgb(0, 0, 0); /* Black text for buttons */
+  background-color: rgb(96, 206, 128); /* Secondary Green background */
+}
+
+.button:hover {
+  background-color: rgb(127, 127, 127); /* Accent Grey on hover */
+  color: white; /* White text on hover */
+}

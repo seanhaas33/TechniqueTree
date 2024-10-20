@@ -5,12 +5,6 @@ import './homepage.css';
 const HomePage = () => {
   return (
     <div className="homepage-container">
-      {/* Header Section */}
-      <header className="header">
-        <h1 className="title">Technique Tree</h1>
-        <div className="logo">Logo</div>
-      </header>
-
       {/* Description Section */}
       <section className="description-section">
         <p className="description">

@@ -1,0 +1,34 @@
+/* Header section */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 10px;
+    position: relative; 
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    position: absolute; 
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+.logo {
+    width: 100px;
+    height: 50px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin-left: auto;
+}
