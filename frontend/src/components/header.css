@@ -1,22 +1,20 @@
-/* Header section */
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px; 
-    margin: 0 auto; 
     padding: 10px;
-    position: relative; 
+    background-color: rgb(21, 67, 96); /* Primary Blue */
+    box-sizing: border-box; /* Ensure padding is included in width */
 }
 
 .title {
     font-size: 36px;
     font-weight: bold;
     color: white;
-    position: absolute; 
+    position: absolute;
     left: 50%;
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
 }
 
 .logo {
