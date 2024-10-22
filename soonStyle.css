@@ -1,0 +1,31 @@
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+body {
+  background-color: rgb(21, 67, 96);
+  color: white; /* Ensure text is readable */
+}
+
+#comingSoonBox {
+  display: block;
+  animation: fadeInOut 3s infinite;
+}
+
+input, textarea {
+  border: 2px solid black;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input:focus, textarea:focus {
+  border-color: rgb(96, 206, 128);
+  outline: none;
+}
+
+form div {
+  color: white;
+}
+
+
