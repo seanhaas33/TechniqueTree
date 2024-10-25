@@ -4,6 +4,8 @@ import Navbar from './components/navbar';
 import Header from './components/header'
 
 import HomePage from './pages/homepage';
+import Sports from './pages/sports';
+
 
 function App() {
   return (
@@ -12,6 +14,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} /> 
+        <Route path="/sports" element={<Sports />} />
       </Routes>
     </Router>
   );
