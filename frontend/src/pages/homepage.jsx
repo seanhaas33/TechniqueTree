@@ -22,6 +22,8 @@ const HomePage = () => {
         </p>
       </section>
 
+      
+
       {/* Circular Buttons Section */}
       <section className="buttons-section">
         <div className="button">
