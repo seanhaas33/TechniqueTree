@@ -1,11 +1,14 @@
-/* Container for the homepage */
 .homepage-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  min-height: 100vh; /* Ensure it covers the full viewport height */
-  color: white; /* Make text readable on the blue background */
+  min-height: 100vh; 
+  color: white; 
+  background-image: url('/public/background.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
 }
 
 
@@ -34,20 +37,37 @@
   margin-top: 20px;
 }
 
+/* Button styling */
 .button {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 150px;
   height: 150px;
-  border: 2px solid white; /* White border to match theme */
+  border: 2px solid white;
   border-radius: 50%;
-  text-align: center;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  color: rgb(0, 0, 0); /* Black text for buttons */
-  background-color: rgb(96, 206, 128); /* Secondary Green background */
+  color: rgb(0, 0, 0);
+  background-color: rgb(96, 206, 128);
+  transition: background-color 0.3s ease;
+}
+
+/* Ensure the link fills the entire button */
+.button-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit text color */
+}
+
+.button:hover {
+  background-color: rgb(127, 127, 127);
+  color: white;
 }
 
 .button:hover {

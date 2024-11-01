@@ -27,7 +27,7 @@ const HomePage = () => {
       {/* Circular Buttons Section */}
       <section className="buttons-section">
         <div className="button">
-          <span>View Content</span>
+          <a href="/sports" className="button-link">View Content</a>
         </div>
         <div className="button">
           <span>Create Account</span>
@@ -36,6 +36,8 @@ const HomePage = () => {
           <span>Maybe Other</span>
         </div>
       </section>
+
+      
     </div>
   );
 };
