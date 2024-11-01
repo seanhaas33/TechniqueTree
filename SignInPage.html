@@ -1,52 +1,121 @@
 <!DOCTYPE html>
-<html>
-    
-    <head>
-        <title>
-            Sign In or Create Account for Technique Tree!
-        </title>
+<html lang="en">
 
-        <style>
-           body {
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In or Create Your Technique Tree Account!</title>
+    <style>
+        /* Background Styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
             background-image: url('TechniqueTreeLogo.png');
             background-size: cover;
-            background-repeat: no-repeat;
             background-position: 0px -240px;
-            }
-
-        .text-background {
-            background-color: white;
-            border-radius: 8px; /* Optional: rounds the corners */
-            max-width: 180px; /* Optional: restricts width for readability */
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #333;
         }
-        .text-color {
-            color:  rgb(96, 206, 128);
+
+        /* Container for the form */
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
         }
-        </style>
 
-    </head>
-    <body> 
-        <div class="text-color">
-            <h1>Sign In or Create Account for Technique Tree!</h1>
-            <form> 
-                <label for="username"> Enter your username:</label>
+        /* Title Styling */
+        h1 {
+            color: rgb(34, 139, 34);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
 
-                <input type="text" id="username" name="username" placeholder="choose a username">
-    
-                <br><br>
-    
-                <label for="email"> Enter your email:</label>
-                <input type="email" id="email" name="email" placeholder="your email">
-    
-                <br><br>
-    
-                <label for="password"> Enter your password:</label>
-                <input type="password" id="password" name="password" placeholder="choose a password" required>
-    
-                <br><br>
-    
-                <input type="submit" name="submit" id="submit" value="create your account">
-            </form>
-        </div>
-    </body>
-    </html>
+        /* Form Styling */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            color: #333;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: rgb(34, 139, 34);
+            outline: none;
+        }
+
+        /* Sign-In Button Styling */
+        input[type="submit"] {
+            background-color: rgb(34, 139, 34);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgb(24, 100, 24);
+            transform: scale(1.05);
+        }
+
+        /* Create Account Button Styling */
+        .create-account {
+            display: block;
+            margin-top: 15px;
+            color: rgb(34, 139, 34);
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .create-account:hover {
+            color: rgb(24, 100, 24);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sign In to Technique Tree</h1>
+        <form action="#" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <input type="submit" value="Sign In">
+        </form>
+
+        <!-- Create Account Link -->
+        <a href="create-account.html" class="create-account">Don't have an account? Create one!</a>
+    </div>
+</body>
+
+</html>
