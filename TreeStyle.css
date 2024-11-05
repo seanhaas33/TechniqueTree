@@ -31,6 +31,28 @@ header {
     margin: 20px 0;
 }
 
+
+.tree-diagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+.horizontal-tree-diagram {
+    display: flex;
+    justify-content: space-around; /* Spaces each level evenly */
+    align-items: center;           /* Vertically centers the nodes */
+    margin-top: 20px;
+}
+
+.level {
+    display: flex;
+    flex-direction: column;         /* Stacks nodes within each level */
+    align-items: center;            /* Centers nodes within each level */
+}
+
 .node {
     background-color: var(--secondary);
     border: 2px solid var(--border);
@@ -43,4 +65,5 @@ header {
     justify-content: center;
     color: white;
     font-size: 1.2em;
+    margin: 10px 0;                 /* Adds space between nodes in each level */
 }
