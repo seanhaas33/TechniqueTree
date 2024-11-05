@@ -13,7 +13,7 @@ const sportsList = [
 const Sports = () => {
   return (
     <div className="sports-container">
-      <h1 className="title">Explore Sports</h1>
+      <h1 className="explore">Explore Sports</h1>
       <div className="sports-list">
         {sportsList.map((sport) => (
           <Link
