@@ -5,6 +5,7 @@ import Header from './components/header'
 
 import HomePage from './pages/homepage';
 import Sports from './pages/sports';
+import Sportcat from './pages/sport_categories';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} /> 
         <Route path="/sports" element={<Sports />} />
+        <Route path="/sportcat" element={<Sportcat />} />
       </Routes>
     </Router>
   );

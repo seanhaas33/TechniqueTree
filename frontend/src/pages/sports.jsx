@@ -17,7 +17,7 @@ const Sports = () => {
       <div className="sports-list">
         {sportsList.map((sport) => (
           <Link
-            to={`/sports/${sport.name.toLowerCase()}`}
+            to={`/sportcat`}
             key={sport.name}
             className="sport-item"
           >
