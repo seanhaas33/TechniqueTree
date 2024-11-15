@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Sport</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('Minimal_TechniqueTree.png');
+            background-size: cover; /* Ensures the image covers the background */
+            background-attachment: fixed; /* Keeps the background fixed during scroll */
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Slight background for readability */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 10px;
+            color: rgb(34, 139, 34);
+        }
+
+        .sport-section {
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .select-button {
+            display: inline-block;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .select-button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 15px;
+            }
+
+            .select-button {
+                width: 100%; /* Full-width button on smaller screens */
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Select Your Sport</h2>
+
+    <!-- Sports Selection Section -->
+    <div class="sport-section">
+        <label>
+            <input type="radio" name="sport" value="soccer">
+            Soccer
+        </label>
+        <label>
+            <input type="radio" name="sport" value="wrestling">
+            Wrestling
+        </label>
+        <label>
+            <input type="radio" name="sport" value="basketball">
+            Basketball
+        </label>
+        <label>
+            <input type="radio" name="sport" value="football">
+            Football
+        </label>
+        <label>
+            <input type="radio" name="sport" value="baseball">
+            Baseball
+        </label>
+        <label>
+            <input type="radio" name="sport" value="tennis">
+            Tennis
+        </label>
+    </div>
+
+    <button class="select-button">Submit Selection</button>
+</div>
+
+</body>
+</html>
