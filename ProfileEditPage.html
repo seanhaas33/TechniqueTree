@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile - Technique Tree</title>
+    <style>
+        /* Background and Body Styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('TechniqueTreeLogo.png');
+            background-size: cover;
+            background-position: 0px -240px;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        /* Semi-transparent container */
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        /* Heading Styling */
+        .container h1 {
+            font-size: 1.8rem;
+            color: rgb(34, 139, 34);
+            margin-bottom: 20px;
+        }
+
+        /* Form Styling */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            color: #333;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: rgb(34, 139, 34);
+            outline: none;
+        }
+
+        /* Save Button Styling */
+        input[type="submit"] {
+            background-color: rgb(34, 139, 34);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgb(24, 100, 24);
+            transform: scale(1.05);
+        }
+
+        /* Animation for the container */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Edit Your Profile</h1>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Update your username" value="JohnDoe" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Update your email" value="johndoe@example.com" required>
+
+            <label for="password">New Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter a new password">
+
+            <label for="bio">Bio:</label>
+            <input type="text" id="bio" name="bio" placeholder="Tell us about yourself" value="Lifelong learner and sport enthusiast!">
+
+            <input type="submit" value="Save Changes">
+        </form>
+    </div>
+</body>
+
+</html>
