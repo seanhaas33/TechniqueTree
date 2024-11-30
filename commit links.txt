@@ -1,0 +1,31 @@
+All commits
+
+https://github.com/seanhaas33/TechniqueTree/pull/3/commits/202e2bdd5d8b8aa55a57d85b5020a8d58a421136
+https://github.com/seanhaas33/TechniqueTree/pull/3/commits/078a5cff65436006936f22bfd98942f0d4215cc6
+https://github.com/seanhaas33/TechniqueTree/pull/3/commits/b2cc1734a7d11c57427ac85bb8d6861c8eb93cfd
+
+https://github.com/seanhaas33/TechniqueTree/pull/3/commits/65293e52f7de8f7a63a189c81406dbd1b1e6ce17
+https://github.com/seanhaas33/TechniqueTree/pull/3/commits/98bf802eb013058aa20dd4f79cd82a211d1b5d13
+https://github.com/seanhaas33/TechniqueTree/pull/3/commits/a9a42e959c942fa6005cb638ad83ee44ed36041c
+
+
+
+
+Front-end goals examples:
+Format videos in organized structure
+Include progress bar based off how much of certain sport/subsection they have watched
+Like/dislike/star rating feature
+Login page, home page, sections for different sports
+Animations for changing page 
+Sliding sidebar for the different sports
+Loading screen
+
+
+Back end goals:
+Domain working, pages connected, 
+Videos accessible on website
+User account creation
+Store progress/videos watched of users
+Store ratings
+Allow users to self assess their confidence in what is displayed in each video, allowing for a more accurate analysis of their progress
+
