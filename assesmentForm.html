@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confidence Assessment</title>
+</head>
+<body>
+    <h1>Confidence Assessment for Video: {{ video_id }}</h1>
+    <form action="" method="POST">
+        <label for="confidence">How confident are you in understanding this video? (1 = Low, 5 = High)</label><br>
+        <input type="number" id="confidence" name="confidence" min="1" max="5" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
