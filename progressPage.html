@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Progress</title>
+</head>
+<body>
+    <h1>Your Progress</h1>
+    <ul>
+        {% for video_id, avg_confidence in progress.items() %}
+            <li>Video {{ video_id }}: Average Confidence - {{ avg_confidence|round(2) }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
