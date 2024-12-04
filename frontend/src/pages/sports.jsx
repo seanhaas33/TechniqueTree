@@ -37,15 +37,15 @@ const SportsPage = () => {
   };
 
   return (
-    <div className="sports-container">
+    <div className="sports-container fade-in">
       {!selectedSport ? (
         <div className="sports-list">
-          <h1>Select a Sport</h1>
-          <div className="sports-grid">
+          <h1 className="slide-in">Select a Sport</h1>
+          <div className="sports-grid slide-in">
             {sportsList.map((sport, index) => (
               <div
                 key={index}
-                className="sport-card"
+                className="sport-card grow"
                 onClick={() => handleSportClick(sport)}
               >
                 <img src={sport.image} alt={sport.name} />
@@ -55,16 +55,16 @@ const SportsPage = () => {
           </div>
         </div>
       ) : (
-        <div className="categories-view">
-          <h1>{selectedSport.name} Categories</h1>
-          <div className="categories-grid">
+        <div className="categories-view fade-in">
+          <h1 className="slide-in">{selectedSport.name} Categories</h1>
+          <div className="categories-grid slide-in">
             {selectedSport.categories.map((category, index) => (
-              <button key={index} className="category-button">
+              <button key={index} className="category-button grow">
                 {category}
               </button>
             ))}
           </div>
-          <button className="back-button" onClick={() => setSelectedSport(null)}>
+          <button className="back-button grow" onClick={() => setSelectedSport(null)}>
             Back to Sports
           </button>
         </div>
