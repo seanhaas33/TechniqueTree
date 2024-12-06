@@ -167,6 +167,61 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Default Light Mode */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('Minimal_TechniqueTree.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #fff; /* Light text color */
+}
+
+/* Dark Mode Styles */
+body.dark-mode h2 {
+    color: #8B4513; /* Light brown for heading in dark mode */
+}
+
+body.dark-mode .container {
+    background-color: rgba(0, 0, 0, 0.85); /* Darker container background */
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.1); /* Light shadow for dark mode */
+}
+
+body.dark-mode label {
+    color: #ddd; /* Light text for labels */
+}
+
+body.dark-mode input[type="text"], body.dark-mode input[type="email"], body.dark-mode input[type="password"] {
+    background-color: rgba(255, 255, 255, 0.1); /* Lighter input fields */
+    border: 2px solid #8B4513;
+    color: #fff; /* White text in inputs */
+}
+
+body.dark-mode input[type="checkbox"] {
+    transform: scale(1.3);
+}
+
+body.dark-mode .save-button {
+    background-color: #633A22; /* Darker button background */
+}
+
+body.dark-mode .file-label {
+    background-color: #633A22; /* Darker file input button */
+}
+
+/* Dark Mode Toggle */
+#dark-mode-toggle {
+    transform: scale(1.2);
+    margin-right: 10px;
+}
+
 
         @media (max-width: 600px) {
             .container {
@@ -279,6 +334,16 @@
         <button class="small-button" id="connect-button">Connect Accounts</button>
         <button class="small-button" id="disconnect-button">Disconnect Accounts</button>
     </div>
+</div>
+
+
+<!-- Dark Mode Toggle Section -->
+<div class="settings-section">
+    <h3>Appearance Settings</h3>
+    <label>
+        <input type="checkbox" id="dark-mode-toggle">
+        Enable Dark Mode
+    </label>
 </div>
 
 
