@@ -357,8 +357,24 @@
         </label>
     </div>
 
+    <!-- Delete Account Section -->
+    <div class="settings-section" style="border-top: 2px solid #ccc; padding-top: 20px;">
+        <h3 style="color: red;">Delete Account</h3>
+        <p style="color: red; font-weight: bold;">Warning: Deleting your account is permanent and cannot be undone.</p>
+        <button class="small-button" style="background-color: red;" id="delete-account-button">Delete My Account</button>
+    </div>
+
     <button class="save-button">Save Changes</button>
 </div>
+
+<script>
+    document.getElementById('delete-account-button').addEventListener('click', function() {
+        if (confirm("Are you sure you want to delete your account? This action is irreversible.")) {
+            // Code to handle account deletion goes here
+            alert("Your account has been deleted.");
+        }
+    });
+</script>
 
 </body>
 </html>
