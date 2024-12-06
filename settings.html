@@ -59,14 +59,21 @@
 
         label {
             display: block;
-            margin: 15px 0 10px;
+            margin-bottom: 8px;
             font-weight: bold;
             font-size: 18px;
             color: #333;
         }
 
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         input[type="text"], input[type="email"], input[type="password"] {
-            width: 100%;
+            width: 90%; /* Adjusted for centering */
+            max-width: 600px; /* Limit the size of input boxes */
             padding: 12px;
             font-size: 16px;
             border: 2px solid #8B4513;
@@ -142,21 +149,27 @@
     <!-- Profile Settings Section -->
     <div class="settings-section">
         <h3>Profile Settings</h3>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" placeholder="Enter your username">
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email">
+        <div class="input-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username">
+        </div>
+        <div class="input-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+        </div>
     </div>
 
     <!-- Account Settings Section -->
     <div class="settings-section">
         <h3>Account Settings</h3>
-        <label for="password">Change Password:</label>
-        <input type="password" id="password" name="password" placeholder="Enter new password">
-
-        <label for="confirm-password">Confirm Password:</label>
-        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm new password">
+        <div class="input-group">
+            <label for="password">Change Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter new password">
+        </div>
+        <div class="input-group">
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm new password">
+        </div>
     </div>
 
     <!-- Notification Preferences Section -->
