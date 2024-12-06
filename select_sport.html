@@ -50,7 +50,7 @@
             font-weight: bold;
             color: #fff;
             background-color: rgba(255, 255, 255, 0.1);
-            border: 2px solid #8B4513; /* Changed border to match brown */
+            border: 2px solid #8B4513; /* Brown border */
             border-radius: 8px;
             transition: all 0.3s ease;
             cursor: pointer;
@@ -65,6 +65,28 @@
             margin-right: 12px;
             transform: scale(1.2);
             cursor: pointer;
+        }
+
+        .custom-sport {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .custom-sport input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #8B4513;
+            border-radius: 5px;
+            margin-top: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .custom-sport input:focus {
+            border-color: #28a745;
         }
 
         .select-button {
@@ -149,10 +171,52 @@
                 <input type="radio" name="sport" value="tennis">
                 Tennis
             </label>
+            <label>
+                <input type="radio" name="sport" value="other" id="other">
+                Other
+            </label>
+            <!-- Input for custom sport -->
+            <div class="custom-sport" id="customSport">
+                <input type="text" placeholder="Enter your sport..." id="customInput">
+            </div>
         </div>
 
-        <button class="select-button">Submit Selection</button>
+        <button class="select-button" onclick="handleSubmit()">Submit Selection</button>
     </div>
+
+    <script>
+        const otherRadio = document.getElementById('other');
+        const customSport = document.getElementById('customSport');
+        const customInput = document.getElementById('customInput');
+
+        otherRadio.addEventListener('change', () => {
+            if (otherRadio.checked) {
+                customSport.style.display = 'block';
+            }
+        });
+
+        document.querySelectorAll('input[name="sport"]').forEach(radio => {
+            radio.addEventListener('change', () => {
+                if (!otherRadio.checked) {
+                    customSport.style.display = 'none';
+                    customInput.value = '';
+                }
+            });
+        });
+
+        function handleSubmit() {
+            const selectedSport = document.querySelector('input[name="sport"]:checked');
+            if (selectedSport) {
+                if (selectedSport.value === 'other' && customInput.value) {
+                    alert(`Searching for: ${customInput.value}`);
+                } else {
+                    alert(`Selected sport: ${selectedSport.value}`);
+                }
+            } else {
+                alert('Please select a sport.');
+            }
+        }
+    </script>
 
 </body>
 
