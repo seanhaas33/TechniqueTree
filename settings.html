@@ -283,6 +283,16 @@
         </div>
     </div>
 
+    <!-- Add Friend Section -->
+    <div class="settings-section">
+        <h3>Add Friend</h3>
+        <div class="input-group">
+            <label for="friend-username">Enter Friend's Username:</label>
+            <input type="text" id="friend-username" name="friend-username" placeholder="Enter friend's username">
+        </div>
+        <button class="small-button" id="add-friend-button">Add Friend</button>
+    </div>
+
     <!-- Notification Preferences Section -->
     <div class="settings-section">
         <h3>Notification Preferences</h3>
@@ -372,6 +382,16 @@
         if (confirm("Are you sure you want to delete your account? This action is irreversible.")) {
             // Code to handle account deletion goes here
             alert("Your account has been deleted.");
+        }
+    });
+
+    document.getElementById('add-friend-button').addEventListener('click', function() {
+        const friendUsername = document.getElementById('friend-username').value;
+        if (friendUsername.trim() === '') {
+            alert('Please enter a username');
+        } else {
+            // Add friend logic goes here
+            alert('Friend request sent to ' + friendUsername);
         }
     });
 </script>
