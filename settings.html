@@ -34,23 +34,49 @@
             margin-bottom: 30px;
         }
 
-        label {
-            display: block;
-            margin: 10px 0 5px;
-            font-weight: bold;
+        h3 {
+            color: #007BFF;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
         }
 
-        input[type="text"], input[type="email"], input[type="password"] {
+        /* Updated style for Username and Email inputs */
+        .styled-input {
+            margin-bottom: 15px;
+        }
+
+        .styled-input label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .styled-input input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #8B4513; /* Brown border */
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #333;
+            outline: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .styled-input input:focus {
+            border-color: #28a745; /* Green border on focus */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type="password"], input[type="checkbox"] {
             width: 100%;
             padding: 10px;
             margin: 5px 0 15px;
             border: 1px solid #ccc;
             border-radius: 5px;
             box-sizing: border-box;
-        }
-
-        input[type="checkbox"] {
-            margin-right: 10px;
         }
 
         .save-button {
@@ -90,11 +116,14 @@
     <!-- Profile Settings Section -->
     <div class="settings-section">
         <h3>Profile Settings</h3>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" placeholder="Enter your username">
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email">
+        <div class="styled-input">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username">
+        </div>
+        <div class="styled-input">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+        </div>
     </div>
 
     <!-- Account Settings Section -->
