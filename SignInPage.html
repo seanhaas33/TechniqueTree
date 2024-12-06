@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -97,9 +96,21 @@
         .create-account:hover {
             color: rgb(24, 100, 24);
         }
+
+        /* Checkbox Styling */
+        .checkbox-container {
+            color: #333;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .checkbox-label {
+            margin-left: 5px;
+        }
     </style>
 </head>
-
 <body>
     <div class="container">
         <h1>Sign In to Technique Tree</h1>
@@ -110,12 +121,16 @@
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" placeholder="Enter your password" required>
 
+            <!-- Remember Me Checkbox -->
+            <div class="checkbox-container">
+                <input type="checkbox" id="remember-me" name="remember-me">
+                <label for="remember-me" class="checkbox-label">Remember me</label>
+            </div>
+
             <input type="submit" value="Sign In">
         </form>
-
         <!-- Create Account Link -->
         <a href="create-account.html" class="create-account">Don't have an account? Create one!</a>
     </div>
 </body>
-
 </html>
