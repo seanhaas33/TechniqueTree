@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In or Create Your Technique Tree Account!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
         /* Background Styling */
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif; /* Updated to Roboto for better readability */
             background-image: url('TechniqueTreeLogo.png');
             background-size: cover;
             background-position: 0px -240px;
@@ -36,6 +37,7 @@
             color: rgb(34, 139, 34);
             margin-bottom: 20px;
             font-size: 1.8rem;
+            font-weight: 500; /* Slightly bolder for prominence */
         }
 
         /* Form Styling */
@@ -145,20 +147,20 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container" role="main">
         <h1>Sign In to Technique Tree</h1>
-        <form action="#" method="post" onsubmit="return validateForm()">
+        <form action="#" method="post" onsubmit="return validateForm()" role="form" aria-labelledby="formTitle">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required aria-required="true">
             <div id="email-feedback" class="validation-feedback"></div>
 
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required aria-required="true">
             <div id="username-feedback" class="validation-feedback"></div>
 
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password" required>
-            <span class="toggle-password" onclick="togglePasswordVisibility()">👁️</span>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required aria-required="true">
+            <span class="toggle-password" onclick="togglePasswordVisibility()" aria-label="Show password" role="button" tabindex="0">👁️</span>
             <div class="password-strength-meter" id="password-strength-meter">
                 <div></div>
             </div>
@@ -166,14 +168,14 @@
 
             <!-- Remember Me Checkbox -->
             <div class="checkbox-container">
-                <input type="checkbox" id="remember-me" name="remember-me">
+                <input type="checkbox" id="remember-me" name="remember-me" aria-label="Remember me">
                 <label for="remember-me" class="checkbox-label">Remember me</label>
             </div>
 
-            <input type="submit" value="Sign In">
+            <input type="submit" value="Sign In" aria-label="Sign in to your account">
         </form>
         <!-- Create Account Link -->
-        <a href="create-account.html" class="create-account">Don't have an account? Create one!</a>
+        <a href="create-account.html" class="create-account" role="link">Don't have an account? Create one!</a>
     </div>
     <script>
         function togglePasswordVisibility() {
