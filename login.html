@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Technique Tree Login</title>
+<style>
+  :root {
+    --primary: rgb(21, 67, 96);       /* Primary Blue */
+    --secondary: rgb(96, 206, 128);   /* Secondary Green */
+    --accent: rgb(127, 127, 127);     /* Accent Grey */
+    --border: rgb(0, 0, 0);           /* Black Borders */
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--primary);
+    color: white;
+    font-family: 'Arial', sans-serif;
+  }
+  .login-container {
+    text-align: center;
+    background-color: var(--accent);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px var(--border);
+  }
+  img.logo {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    width: 80%;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  button:hover {
+    background-color: rgb(80, 180, 110); /* Slightly darker green */
+  }
+</style>
+</head>
+<body>
+<div class="login-container">
+  <img src="img/TechniqueTree_logo.png" alt="Technique Tree Logo" class="logo">
+  <div>
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+    <button type="submit">Log In</button>
+  </div>
+</div>
+</body>
+</html>
