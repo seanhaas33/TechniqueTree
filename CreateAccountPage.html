@@ -87,6 +87,12 @@
             transform: scale(1.05);
         }
 
+        /* Checkbox Styling */
+        .checkbox-container {
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
         /* Animation for the container */
         @keyframes fadeIn {
             from {
@@ -116,6 +122,11 @@
 
             <label for="confirm-password">Confirm Password:</label>
             <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="#">Terms and Conditions</a>.</label>
+            </div>
 
             <input type="submit" value="Create Your Account">
         </form>
