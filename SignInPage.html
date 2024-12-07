@@ -19,6 +19,7 @@
             justify-content: center;
             height: 100vh;
             color: #333;
+            position: relative; /* Ensures positioning context starts at body */
         }
 
         /* Container for the form */
@@ -29,7 +30,6 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
             text-align: center;
             max-width: 400px;
-            position: relative; /* Added for positioning the toggle icon */
         }
 
         /* Title Styling */
@@ -144,9 +144,30 @@
             font-size: 0.8rem;
             margin-top: 5px;
         }
+
+        /* Back Button Styling */
+        .back-button {
+            position: absolute;
+            top: 10px; /* Position adjusted to top of screen */
+            left: 10px; /* Position adjusted to left of screen */
+            background-color: rgba(255, 255, 255, 0.8);
+            color: rgb(34, 139, 34);
+            border: none;
+            padding: 8px 16px;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: rgba(255, 255, 255, 1);
+        }
     </style>
 </head>
 <body>
+    <a href="javascript:history.back()" class="back-button" role="button">Back</a>
     <div class="container" role="main">
         <h1>Sign In to Technique Tree</h1>
         <form action="#" method="post" onsubmit="return validateForm()" role="form" aria-labelledby="formTitle">
