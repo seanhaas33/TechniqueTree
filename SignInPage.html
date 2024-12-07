@@ -119,18 +119,27 @@
             right: 60px; /* Adjusted to fit within the form */
             margin-top: -31px; /* Adjusted to align with the password input */
         }
+
+        /* Validation Feedback */
+        .validation-feedback {
+            color: red;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Sign In to Technique Tree</h1>
-        <form action="#" method="post">
+        <form action="#" method="post" onsubmit="return validateForm()">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            <div id="username-feedback" class="validation-feedback"></div>
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" placeholder="Enter your password" required>
             <span class="toggle-password" onclick="togglePasswordVisibility()">👁️</span>
+            <div id="password-feedback" class="validation-feedback"></div>
 
             <!-- Remember Me Checkbox -->
             <div class="checkbox-container">
@@ -151,6 +160,29 @@
             } else {
                 passwordInput.type = 'password';
             }
+        }
+
+        function validateForm() {
+            let valid = true;
+            const username = document.getElementById('username');
+            const password = document.getElementById('password');
+            const usernameFeedback = document.getElementById('username-feedback');
+            const passwordFeedback = document.getElementById('password-feedback');
+
+            usernameFeedback.textContent = '';
+            passwordFeedback.textContent = '';
+
+            if (username.value.length < 4) {
+                usernameFeedback.textContent = 'Username must be at least 4 characters.';
+                valid = false;
+            }
+
+            if (password.value.length < 6) {
+                passwordFeedback.textContent = 'Password must be at least 6 characters.';
+                valid = false;
+            }
+
+            return valid;
         }
     </script>
 </body>
