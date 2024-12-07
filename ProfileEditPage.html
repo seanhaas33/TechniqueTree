@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Profile - Technique Tree</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
         /* Background and Body Styling */
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif; /* Using Roboto for better readability */
             background-image: url('TechniqueTreeLogo.png');
             background-size: cover;
             background-position: 0px -240px;
@@ -88,6 +89,14 @@
             transform: scale(1.05);
         }
 
+        /* Validation Feedback */
+        .validation-feedback {
+            color: red;
+            font-size: 0.8rem;
+            margin-top: 5px;
+            display: none;
+        }
+
         /* Animation for the container */
         @keyframes fadeIn {
             from {
@@ -111,12 +120,15 @@
 
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" placeholder="Update your username" value="JohnDoe" required>
+            <div class="validation-feedback" id="username-feedback"></div>
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="Update your email" value="johndoe@example.com" required>
+            <div class="validation-feedback" id="email-feedback"></div>
 
             <label for="password">New Password:</label>
             <input type="password" id="password" name="password" placeholder="Enter a new password">
+            <div class="validation-feedback" id="password-feedback"></div>
 
             <label for="bio">Bio:</label>
             <input type="text" id="bio" name="bio" placeholder="Tell us about yourself" value="Lifelong learner and sport enthusiast!">
@@ -124,6 +136,38 @@
             <input type="submit" value="Save Changes">
         </form>
     </div>
-</body>
 
+    <script>
+        document.getElementById('username').addEventListener('input', function() {
+            const feedback = document.getElementById('username-feedback');
+            if (this.value.length < 4) {
+                feedback.style.display = 'block';
+                feedback.textContent = 'Username must be at least 4 characters long.';
+            } else {
+                feedback.style.display = 'none';
+            }
+        });
+
+        document.getElementById('email').addEventListener('input', function() {
+            const feedback = document.getElementById('email-feedback');
+            const emailPattern = /^[^@]+@[^@]+\.[^@]+$/; // Simplistic email pattern for demonstration
+            if (!emailPattern.test(this.value)) {
+                feedback.style.display = 'block';
+                feedback.textContent = 'Please enter a valid email address.';
+            } else {
+                feedback.style.display = 'none';
+            }
+        });
+
+        document.getElementById('password').addEventListener('input', function() {
+            const feedback = document.getElementById('password-feedback');
+            if (this.value && this.value.length < 6) {
+                feedback.style.display = 'block';
+                feedback.textContent = 'Password must be at least 6 characters long.';
+            } else {
+                feedback.style.display = 'none';
+            }
+        });
+    </script>
+</body>
 </html>
