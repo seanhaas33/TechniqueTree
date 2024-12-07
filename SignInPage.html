@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In or Create Your Technique Tree Account!</title>
+    <style>
+        /* Background Styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('TechniqueTreeLogo.png');
+            background-size: cover;
+            background-position: 0px -240px;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        /* Container for the form */
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+            position: relative; /* Added for positioning the toggle icon */
+        }
+
+        /* Title Styling */
+        h1 {
+            color: rgb(34, 139, 34);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        /* Form Styling */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            color: #333;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            width: calc(100% - 20px); /* Ensure full width minus padding */
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: rgb(34, 139, 34);
+            outline: none;
+        }
+
+        /* Sign-In Button Styling */
+        input[type="submit"] {
+            background-color: rgb(34, 139, 34);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgb(24, 100, 24);
+            transform: scale(1.05);
+        }
+
+        /* Create Account Button Styling */
+        .create-account {
+            display: block;
+            margin-top: 15px;
+            color: rgb(34, 139, 34);
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .create-account:hover {
+            color: rgb(24, 100, 24);
+        }
+
+        /* Checkbox Styling */
+        .checkbox-container {
+            color: #333;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .checkbox-label {
+            margin-left: 5px;
+        }
+
+        /* Toggle Password Visibility */
+        .toggle-password {
+            cursor: pointer;
+            position: absolute;
+            right: 60px; /* Adjusted to fit within the form */
+            margin-top: -31px; /* Adjusted to align with the password input */
+        }
+
+        /* Password Strength Meter */
+        .password-strength-meter {
+            width: 100%;
+            height: 5px;
+            background-color: #ddd;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+
+        .password-strength-meter > div {
+            height: 5px;
+            border-radius: 4px;
+        }
+
+        /* Validation Feedback */
+        .validation-feedback {
+            color: red;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sign In to Technique Tree</h1>
+        <form action="#" method="post" onsubmit="return validateForm()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            <div id="username-feedback" class="validation-feedback"></div>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <span class="toggle-password" onclick="togglePasswordVisibility()">👁️</span>
+            <div class="password-strength-meter" id="password-strength-meter">
+                <div></div>
+            </div>
+            <div id="password-feedback" class="validation-feedback"></div>
+
+            <!-- Remember Me Checkbox -->
+            <div class="checkbox-container">
+                <input type="checkbox" id="remember-me" name="remember-me">
+                <label for="remember-me" class="checkbox-label">Remember me</label>
+            </div>
+
+            <input type="submit" value="Sign In">
+        </form>
+        <!-- Create Account Link -->
+        <a href="create-account.html" class="create-account">Don't have an account? Create one!</a>
+    </div>
+    <script>
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById('password');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+            } else {
+                passwordInput.type = 'password';
+            }
+        }
+
+        function validateForm() {
+            let valid = true;
+            const username = document.getElementById('username');
+            const password = document.getElementById('password');
+            const usernameFeedback = document.getElementById('username-feedback');
+            const passwordFeedback = document.getElementById('password-feedback');
+
+            usernameFeedback.textContent = '';
+            passwordFeedback.textContent = '';
+
+            if (username.value.length < 4) {
+                usernameFeedback.textContent = 'Username must be at least 4 characters.';
+                valid = false;
+            }
+
+            if (password.value.length < 6) {
+                passwordFeedback.textContent = 'Password must be at least 6 characters.';
+                valid = false;
+            }
+
+            return valid;
+        }
+
+        document.getElementById('password').addEventListener('input', function() {
+            const strengthMeter = document.getElementById('password-strength-meter').firstChild;
+            const value = this.value;
+            const length = value.length;
+            const hasNumbers = /\d/.test(value);
+            const hasSpecial = /\W/.test(value);
+            let strength = 0;
+            if (length > 5) strength += 1;
+            if (hasNumbers) strength += 1;
+            if (hasSpecial) strength += 1;
+
+            switch(strength) {
+                case 0:
+                    strengthMeter.style.width = '0%';
+                    strengthMeter.style.backgroundColor = '#ddd';
+                    break;
+                case 1:
+                    strengthMeter.style.width = '33%';
+                    strengthMeter.style.backgroundColor = 'red';
+                    break;
+                case 2:
+                    strengthMeter.style.width = '66%';
+                    strengthMeter.style.backgroundColor = 'orange';
+                    break;
+                case 3:
+                    strengthMeter.style.width = '100%';
+                    strengthMeter.style.backgroundColor = 'green';
+                    break;
+            }
+        });
+    </script>
+</body>
+</html>
