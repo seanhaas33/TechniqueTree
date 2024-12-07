@@ -145,11 +145,30 @@
             margin-top: 5px;
         }
 
+        /* Free Trial Button Styling */
+        .free-trial-button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgb(34, 139, 34);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .free-trial-button:hover {
+            background-color: rgb(24, 100, 24);
+        }
+
         /* Back Button Styling */
         .back-button {
             position: absolute;
-            top: 10px; /* Position adjusted to top of screen */
-            left: 10px; /* Position adjusted to left of screen */
+            top: 10px;
+            left: 10px;
             background-color: rgba(255, 255, 255, 0.8);
             color: rgb(34, 139, 34);
             border: none;
@@ -197,6 +216,8 @@
         </form>
         <!-- Create Account Link -->
         <a href="create-account.html" class="create-account" role="link">Don't have an account? Create one!</a>
+        <!-- Free Trial Button -->
+        <button class="free-trial-button" onclick="window.location.href='main.html';">Continue without signing in</button>
     </div>
     <script>
         function togglePasswordVisibility() {
