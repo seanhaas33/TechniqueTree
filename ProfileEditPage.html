@@ -97,6 +97,13 @@
             display: none;
         }
 
+        /* Character Counter */
+        .char-counter {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 5px;
+        }
+
         /* Animation for the container */
         @keyframes fadeIn {
             from {
@@ -131,7 +138,8 @@
             <div class="validation-feedback" id="password-feedback"></div>
 
             <label for="bio">Bio:</label>
-            <input type="text" id="bio" name="bio" placeholder="Tell us about yourself" value="Lifelong learner and sport enthusiast!">
+            <input type="text" id="bio" name="bio" placeholder="Tell us about yourself" value="Lifelong learner and sport enthusiast!" maxlength="160">
+            <div class="char-counter" id="bio-counter">0/160</div>
 
             <input type="submit" value="Save Changes">
         </form>
@@ -168,6 +176,18 @@
                 feedback.style.display = 'none';
             }
         });
+
+        const bioInput = document.getElementById('bio');
+        const bioCounter = document.getElementById('bio-counter');
+
+        bioInput.addEventListener('input', function() {
+            const maxLength = this.getAttribute('maxlength');
+            const currentLength = this.value.length;
+            bioCounter.textContent = `${currentLength}/${maxLength}`;
+        });
+
+        // Initialize counter on page load
+        bioCounter.textContent = `${bioInput.value.length}/${bioInput.getAttribute('maxlength')}`;
     </script>
 </body>
 </html>
