@@ -59,13 +59,15 @@
             border-radius: 8px;
             border: 1px solid #ddd;
             font-size: 1rem;
-            transition: border-color 0.3s ease;
+            transition: all 0.3s ease; /* Updated to animate all properties */
+            background: #fff;
         }
 
         input[type="text"]:focus,
         input[type="email"]:focus,
         input[type="password"]:focus {
             border-color: rgb(34, 139, 34);
+            box-shadow: 0 0 8px rgba(34, 139, 34, 0.6); /* New focus shadow */
             outline: none;
         }
 
